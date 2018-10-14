@@ -19,14 +19,17 @@ string reverse (string a)
     return b;
 }
 
+// now we create all available strings.
 string recursion(string a, int time, int k)
 {
     string b;
+    // loops to string.length();
     if (time >= 1) {
         b = reverse(a);
+        // the string we need.
         if (time == k)
         {
-            std::cout << b << " - " << time << " - " << k << '\n';
+            // return that string.
             return b;
         }
         return recursion(b, time - 1, k);

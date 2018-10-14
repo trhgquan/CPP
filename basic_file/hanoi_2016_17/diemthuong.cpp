@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// simple short algorithm
+// simple finding max element algorithm
 int max (int a[], int top)
 {
     int i, max;

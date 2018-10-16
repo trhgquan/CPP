@@ -8,10 +8,9 @@ int max (int a[], int top)
 {
     int i, max;
     max = a[0];
-    for (i = 1; i < top; i++) {
+    for (i = 1; i < top; i++)
         if (a[i] > max)
             max = a[i];
-    }
     std::cout << max << '\n';
     return max;
 }
@@ -26,13 +25,11 @@ int main() {
 
     int a[n];
 
-    while (count <= n && afile >> a[count]) {
+    while (count <= n && afile >> a[count])
         count++;
-    }
 
-    for (count = 1; count <= n; count++) {
+    for (count = 1; count <= n; count++)
         bfile << max(a, count) << " ";
-    }
 
     afile.close();
     bfile.close();

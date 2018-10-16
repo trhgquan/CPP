@@ -7,17 +7,16 @@ int main() {
     std::ifstream afile("short.inp", std::ios::in);
     std::ofstream bfile("short.out", std::ios::out);
 
-    int length, count, i, temp;
+    int length, i, temp;
     bool check = true;
 
     afile >> length;
-    count = 0;
 
     int numbers[length];
+    int count = 0;
 
-    while (count < length && afile >> numbers[count]) {
+    while (count < length && afile >> numbers[count])
         count++;
-    }
 
     while (check) {
         check = false;
@@ -31,12 +30,10 @@ int main() {
         }
     }
 
-
     count = 0;
 
-    while (count < length && bfile << numbers[count] << ' ') {
+    while (count < length && bfile << numbers[count] << ' ')
         count++;
-    }
 
     afile.close();
     bfile.close();

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int W, H, square;
+int W, H, square, max_square;
 int a[10000][10000], b[10000][10000];
 
 void check (int i, int j)
@@ -28,6 +28,8 @@ int main() {
 
     afile >> H >> W;
 
+    max_square = 0;
+
     for (int i = 0; i < H; i++)
         for (int j = 0; j < W; j++)
             afile >> a[i][j];
@@ -40,6 +42,7 @@ int main() {
         }
         if (square != 0)
         {
+            max_square += square;
             bfile << square;
             for (int k = 0; k < square; k++) {
                 bfile << '\t' << "[" << b[k][0] << ", " << b[k][1] << "]";
@@ -47,6 +50,8 @@ int main() {
             bfile << '\n';
         }
     }
+
+    bfile << "Total: " << max_square;
 
     afile.close();
     bfile.close();

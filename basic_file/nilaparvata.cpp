@@ -1,10 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 
 using namespace std;
 
-int W, H, square, square_max = 0;
+int W, H, square;
 int a[10000][10000], b[10000][10000];
 
 void check (int i, int j)

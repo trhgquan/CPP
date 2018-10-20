@@ -13,9 +13,8 @@ string reverse (string a)
     // LAST CHAR OF THE ORIGINAL STRING IS THE FIRST NEW STRING CHAR
     b += a[a.length() - 1];
     // OTHER CHARS REMAIN.
-    for (i = 0; i <= a.length() - 2; i++) {
+    for (i = 0; i <= a.length() - 2; i++)
         b += a[i];
-    }
     return b;
 }
 
@@ -24,16 +23,13 @@ string recursion(string a, int time, int k)
 {
     string b;
     // loops to string.length();
-    if (time >= 1) {
+    if (time >= 1)
         b = reverse(a);
         // the string we need.
         if (time == k)
-        {
             // return that string.
             return b;
-        }
         return recursion(b, time - 1, k);
-    }
     return "-1";
 }
 

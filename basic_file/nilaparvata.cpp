@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
-int W, H, square, max_square;
+int W, H, square, max_square, max_zone = 1;
 int a[10000][10000], b[10000][10000];
 
 void check (int i, int j)
@@ -34,24 +35,23 @@ int main() {
         for (int j = 0; j < W; j++)
             afile >> a[i][j];
 
+
     for (int i = 0; i < H; i++) {
-        square = 0;
         for (int j = 0; j < W; j++) {
-            if (a[i][j] == 1)
+            square = 0;
+            if (a[i][j] == 1) {
                 check(i,j);
-        }
-        if (square != 0)
-        {
-            max_square += square;
-            bfile << square;
-            for (int k = 0; k < square; k++) {
-                bfile << '\t' << "[" << b[k][0] << ", " << b[k][1] << "]";
+                bfile << square;
+                for (int i = 0; i < square; i++) {
+                    bfile << " [" << b[i][0] << ", " << b[i][1] << "]";
+                }
+                bfile << '\n';
             }
-            bfile << '\n';
+            max_square += square;
         }
     }
 
-    bfile << "Total: " << max_square;
+    bfile << max_square;
 
     afile.close();
     bfile.close();

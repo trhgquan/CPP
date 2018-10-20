@@ -32,7 +32,7 @@ int main() {
 
     count = 0;
 
-    while (count < length && bfile << numbers[count] << ' ')
+    while (count < length && bfile << numbers[count] << '\t')
         count++;
 
     afile.close();

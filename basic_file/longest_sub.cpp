@@ -37,7 +37,6 @@ int main() {
             }
             L[i] = LMax + 1;
         }
-
     }
 
     // write the results to a file.

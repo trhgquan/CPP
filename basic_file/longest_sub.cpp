@@ -42,11 +42,11 @@ int main() {
     // write the results to a file.
     bfile << "A : ";
     for (int i = 0; i < m; i++)
-        bfile << A[i] << '\t';
+        bfile << '\t' << A[i];
     bfile << '\n';
     bfile << "L : ";
     for (int i = 0; i < m; i++)
-        bfile << L[i] << '\t';
+        bfile << '\t' << L[i];
     int max = findMax(L,m);
     if (max > 1)
         bfile << '\n' << "Maximum: " << findMax(L, m);

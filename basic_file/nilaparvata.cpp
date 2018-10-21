@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int W, H, square, max_square, max_zone = 1;
+int W, H, square, max_square;
 int a[10000][10000], b[10000][10000];
 
 void check (int i, int j)

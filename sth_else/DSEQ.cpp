@@ -3,6 +3,12 @@
 
 using namespace std;
 
+/**
+ * Ham fromN tra ve tong tu a[0] toi n
+ * @param  int a
+ * @param  int m
+ * @return int
+ */
 int fromN (int a[], int m)
 {
     int s = 0;
@@ -11,6 +17,13 @@ int fromN (int a[], int m)
     return s;
 }
 
+/**
+ * Ham toN tra ve cac gia tri tu a[n] toi a[m]
+ * @param  int a
+ * @param  int n
+ * @param  int m (a[max])
+ * @return int
+ */
 int toN (int a[], int n, int m)
 {
     int s = 0;

@@ -1,53 +1,87 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include <string>
 
 using namespace std;
 
-/**
- * Ham numFromNumber, tra ve cac chu so tu mot so
- * su dung kieu du lieu vector de return.
- * @param  int n
- * @return std::vector<int>
- */
-std::vector<int> numFromNumber (int n)
+string Tru (string a, int b)
 {
-    std::vector<int> a;
-    while (n > 0)
+    string s = "";
+
+    while (b != 0)
     {
-        a.push_back(n % 10);
-        n /= 10;
+        s = char(b % 10 + '0') + s;
+        b /= 10;
     }
-    return a;
+
+    while (a.length() > s.length())
+        s = '0' + s;
+
+    int nho = 0;
+    string k;
+
+    for (int i = a.length() - 1; i >= 0; i--)
+    {
+        if (a[i] - (s[i] + nho) >= 0)
+        {
+            k = char(a[i] - (s[i] + nho) + '0') + k;
+            nho = 0;
+        }
+        else
+        {
+            k = char(a[i] + 10 - (s[i] + nho) + '0') + k;
+            nho = 1;
+        }
+    }
+
+    return k;
+}
+
+long KiemTra (string a)
+{
+    string s = "";
+    long sum = 0;
+
+    for (int i = 0; i < a.length(); i++)
+        sum += a[i] - '0';
+
+    return sum;
 }
 
 int main() {
     std::ifstream afile("GEN.inp", std::ios::in);
     std::ofstream bfile("GEN.out", std::ios::out);
 
-    int T;
+    long T;
+    int sum, dd, f;
+    string M, v;
+
     afile >> T;
-
-    int M[T];
-
-    for (int i = 0; i < T; i++)
-        afile >> M[i];
-
-    for (int i = 0; i < T; i++)
+    for (long i = 0; i < T; i++)
     {
-        int sum = 0, num = 0;
-        // Vet can tu 0.
-        for (int j = 0; j < M[i]; j++) {
-            sum = j;
-            // Tim cac chu so cua j.
-            std::vector<int> number = numFromNumber(j);
-            // Tinh tong so j voi cac chu so j[k] cua no
-            for (int k = 0; k < number.size(); k++)
-                sum += number[k];
-            if (sum == M[i] && num == 0)
-                num = j;
+        afile >> M;
+        dd = 1;
+        f = M.length() * 9;
+
+        while (f >= 1)
+        {
+            v = Tru(M, f);
+
+            if (KiemTra(v) == f)
+            {
+                while (v[0] == '0')
+                    v.erase(v.begin());
+
+                bfile << v << '\n';
+                dd = 0;
+
+                break;
+            }
+            f--;
         }
-        bfile << num << '\n';
+
+        if (dd == 1)
+            bfile << 0 << '\n';
     }
 
     afile.close();

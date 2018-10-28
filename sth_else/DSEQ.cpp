@@ -57,7 +57,7 @@ int main() {
                 max = calc;
                 total = 1;
             }
-    }
+        }
 
     bfile << max << '\t' << total;
 

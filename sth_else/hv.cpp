@@ -40,9 +40,8 @@ int main()
     int M;
     afile >> M;
 
-    while (M > 0)
+    while (M--)
     {
-
         afile >> N;
 
         for (int i = 1; i <= N*2; i++)
@@ -63,7 +62,6 @@ int main()
         Solve();
 
         bfile << square(res) << '\n';
-        M--;
     }
 
     afile.close();

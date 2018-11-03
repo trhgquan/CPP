@@ -37,10 +37,13 @@ int main()
     ifstream afile("hv.inp", ios::in);
     ofstream bfile("hv.out", ios::out);
 
-    while (!afile.eof())
+    int M;
+    afile >> M;
+
+    while (M > 0)
     {
-        if (!(afile >> N))
-            return -1;
+
+        afile >> N;
 
         for (int i = 1; i <= N*2; i++)
         {
@@ -60,6 +63,7 @@ int main()
         Solve();
 
         bfile << square(res) << '\n';
+        M--;
     }
 
     afile.close();

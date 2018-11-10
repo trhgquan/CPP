@@ -1,5 +1,5 @@
 #include <iostream>
-// #include <fstream>
+#include <fstream>
 #include <vector>
 
 #define MAX 10001

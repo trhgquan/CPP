@@ -36,7 +36,6 @@ void init ()
 
 void DFS (int u)
 {
-    int v;
     Free[u] = false;
 
     for (int v = 1; v <= N; v++)

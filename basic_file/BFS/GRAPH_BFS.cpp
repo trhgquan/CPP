@@ -34,12 +34,12 @@ void end () {
     if (Free[F])
         bfile << -1;
     else {
-		while (F != S) {
+        while (F != S) {
             bfile << F << " <- ";
             F = Trace[F];
         }
         bfile << S;
-	}
+    }
 }
 
 int main () {

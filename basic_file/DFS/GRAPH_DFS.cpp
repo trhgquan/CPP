@@ -1,6 +1,3 @@
-// THIS FILE GO WITH
-// https://drive.google.com/file/d/1O8RLgwivgAduoAGeIYsHLHrziRSEoPMb/view?usp=sharing
-
 #include <iostream>
 #include <fstream>
 

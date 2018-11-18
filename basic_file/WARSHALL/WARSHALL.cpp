@@ -12,7 +12,6 @@ ofstream bfile("WARSHALL.out", ios::out);
 bool Free[NMAX];
 bool Graph[NMAX][NMAX];
 int  n, m, count = 1;
-int  Trace[NMAX];
 
 void read () {
     int u, v;

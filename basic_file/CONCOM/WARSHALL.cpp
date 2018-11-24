@@ -18,8 +18,8 @@ void read () {
 
     afile >> n >> m;
 
-    memset(Graph, false, NMAX);
-    memset(Free, true, NMAX);
+    memset(Graph, false, sizeof(Graph));
+    memset(Free, true, sizeof(Free));
 
     for (int i = 1; i <= m; i++) {
         afile >> u >> v;

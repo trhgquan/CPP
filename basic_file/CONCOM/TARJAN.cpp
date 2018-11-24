@@ -18,7 +18,7 @@ int  N, M, Count = 0, ComCount = 0;
 void read() {
     afile >> N >> M;
 
-    memset(graph, false, M);
+    memset(graph, false, sizeof(graph));
 
     for (int i = 1; i <= M; i++) {
         int u, v;
@@ -57,8 +57,9 @@ void visit (int u) {
 
 int main () {
     read();
-    memset(Num, 0, NMAX);
-    memset(Free, true, NMAX);
+
+    memset(Num, 0, sizeof(Num));
+    memset(Free, true, sizeof(Free));
 
     for (int i = 1; i <= N; i++)
         if (Num[i] == 0)

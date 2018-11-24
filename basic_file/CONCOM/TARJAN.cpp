@@ -1,3 +1,4 @@
+// Find strongly-connected component of a graph
 #include <string.h>
 #include <iostream>
 #include <fstream>

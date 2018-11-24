@@ -1,4 +1,5 @@
 // Directing a graph by using DFS.
+// Also means to find bridges in a graph.
 #include <iostream>
 #include <fstream>
 #include <string.h>

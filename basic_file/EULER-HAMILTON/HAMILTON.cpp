@@ -1,4 +1,4 @@
-// 1 route, over all edges, back to where we start.
+// 1 route, over all nodes, back to where we start.
 #include <iostream>
 #include <fstream>
 #include <string.h>

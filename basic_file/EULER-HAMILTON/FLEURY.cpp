@@ -1,4 +1,4 @@
-// FLEURY algorithm - Euler graph
+// FLEURY algorithm - Euler graph: 1 route, over all edges, back to where we start.
 #include <iostream>
 #include <fstream>
 #include <stack>

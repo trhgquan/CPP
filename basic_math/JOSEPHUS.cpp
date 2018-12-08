@@ -25,6 +25,7 @@ int main() {
 lli josephus (lli n, lli m) {
     lli d = n * m;
     while (d > n)
+        // The Josephus formula.
         d = d + (d - n - 1) / (m - 1) - n;
     return d;
 }

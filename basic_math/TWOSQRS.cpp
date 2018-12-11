@@ -1,4 +1,4 @@
-// Check if a number can represent the sum of 2 square number.
+// Check if a number can represent the sum of 2 square number. Code from Quora
 #include <stdio.h>
 #include <math.h>
 

@@ -1,3 +1,4 @@
+// Check if a number can represent the sum of 2 square number.
 #include <stdio.h>
 #include <math.h>
 

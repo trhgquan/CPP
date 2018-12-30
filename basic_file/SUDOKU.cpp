@@ -1,7 +1,6 @@
 // Simple SUDOKU algorithm - StackOverflow.com
 #include <iostream>
 #include <fstream>
-#include <string.h>
 
 using namespace std;
 

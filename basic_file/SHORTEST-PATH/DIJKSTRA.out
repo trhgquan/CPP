@@ -1,2 +1,2 @@
-Distance from 3 to 4: 6
-4 <- 5 <- 6 <- 3
+The shortest distance from 1 to 4: 15
+4 <- 5 <- 6 <- 3 <- 2 <- 1

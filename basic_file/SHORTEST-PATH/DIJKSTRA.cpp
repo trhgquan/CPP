@@ -1,4 +1,5 @@
-// DIRECTED GRAPH
+// DIRECTED GRAPH, BUT ALSO CAN NON-DIRECTED GRAPH.
+// REMOVE THE COMMENT MARK FOR NON-DIRECTED.
 #include <bits/stdc++.h>
 #include <string.h>
 #include <fstream>
@@ -71,13 +72,18 @@ void Read() {
 
     for (u = 1; u <= edges; u++)
         for (v = 1; v <= edges; v++) {
-            if (u == v)
+            if (u == v) {
                 graph[u][v] = 0;
-            else graph[u][v] = infinity;
+                // graph[v][u] = 0;
+            } else {
+                graph[u][v] = infinity;
+                // graph[v][u] = infinity;
+            }
         }
     for (int i = 1; i <= verticles; i++) {
         afile >> u >> v;
         afile >> graph[u][v];
+        // graph[v][u] = graph[u][v];
     }
 }
 
@@ -85,7 +91,7 @@ void Print() {
     if (D[finish] == infinity)
         bfile << "There is no shortest path from " << start << " to " << finish;
     else {
-        bfile << "Distance from " << start << " to " << finish << ": " << D[finish] << '\n';
+        bfile << "The shortest distance from " << start << " to " << finish << ": " << D[finish] << '\n';
 
         while (finish != start) {
             bfile << finish << " <- ";

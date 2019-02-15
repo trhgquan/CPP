@@ -1,3 +1,7 @@
+/**
+ * https://www.geeksforgeeks.org/maximum-size-rectangle-binary-sub-matrix-1s/
+ * IN A NUTSHELL: Find the largest rectangle
+ */
 #include <bits/stdc++.h>
 #include <fstream>
 

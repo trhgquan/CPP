@@ -1,4 +1,4 @@
-// Find vertices of a graph.
+// Find cut-vertices of a graph.
 #include <iostream>
 #include <fstream>
 #include <string.h>

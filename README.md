@@ -1,8 +1,12 @@
 # CPP
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
-I wrote those scripts, with examples from many sources: Quora, geeksforgeeks, stackoverflow,...
+I wrote those scripts, with examples from many sources: Quora, GeeksforGeeks, StackOverflow,..
 
-Reminder (to [@trhgquan](https://github.com/trhgquan)): you will be panic in the future, in the night before the Grand Final Test. At that time, open those files and some will be useful for you.
+My Grand Final Test was on Feb. 27th, 2019. My result: *(waiting)*
 
-From the past [@trhgquan](https://github.com/trhgquan), good luck in the Grand Test. Wish you all the best.
+If you are looking for the documents (problem PDFs, problem solving in a nutshell, ..) please contact me: *my email, you know where, the left column, see?*.
+
+Finally, if you are going to have *or* will have a Grand Final Test: hope you will find something useful in these files. Goodluck to you!
+
+[@trhgquan](https://github.com/trhgquan)

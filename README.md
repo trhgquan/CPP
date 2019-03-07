@@ -5,7 +5,7 @@ I wrote those scripts, with examples from many sources: Quora, GeeksforGeeks, St
 
 My Grand Final Test was on Feb. 27th, 2019.
 
-My result: __*(waiting)*__
+My result: __10 pts - Consolation__
 
 If you are looking for some documents (problem PDFs, problem solving in a nutshell, ..) please contact me: __*my email, you know where, the left column, see?*__
 

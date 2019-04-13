@@ -3,9 +3,14 @@ CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
 I wrote those scripts, with examples from many sources: Quora, GeeksforGeeks, StackOverflow,..
 
+# THE FIRST CHAPTER
 My Grand Final Test was on Feb. 27th, 2019.
 
 My result: __*10/20* pts - 3rd__
+
+# THE NEXT CHAPTER
+Computer Science in the Ho Chi Minh University of Science (HCMUS)
+*writing in progress, but in future*
 
 If you are looking for some documents (problem PDFs, problem solving in a nutshell, ..) please contact me: __*my email, you know where, the left column, see?*__
 

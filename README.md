@@ -6,9 +6,9 @@ I wrote those scripts, with examples from many sources: Quora, GeeksforGeeks, St
 ## THE FIRST CHAPTER
 Computer Science in Nguyen Dinh Chieu Highschool, Ben Tre Province, SR Vietnam.
 
-My First Final Test was on Feb. 28th, 2018.
-My result: __*6.5/20 pts - Consolator*__
-My Grand (and Second) Final Test was on Feb. 27th, 2019.
+My First Final Test was on Feb. 28th, 2018.  
+My result: __*6.5/20 pts - Consolator*__  
+My Grand (and Second) Final Test was on Feb. 27th, 2019.  
 My result: __*10/20* pts - 3rd__
 
 ## THE NEXT CHAPTER

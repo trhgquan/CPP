@@ -32,7 +32,7 @@ bool findPath() {
 
     memset(Trace, 0, sizeof(Trace));
     q.push(A);
-    Trace[A] = 1;
+    Trace[A] = n + 1;
     Delta[A] = maxC;
 
     while (!q.empty()) {
@@ -44,9 +44,11 @@ bool findPath() {
                 if (f[u][v] < c[u][v]) {
                     Trace[v] = u;
                     Delta[v] = min(Delta[u], c[u][v] - f[u][v]);
-                } else if (f[v][u] > 0) {
-                    Trace[v] = -u;
-                    Delta[v] = min(Delta[u], f[v][u]);
+                } else {
+                    if (f[v][u] > 0) {
+                        Trace[v] = -u;
+                        Delta[v] = min(Delta[u], f[v][u]);
+                    }
                 }
 
                 if (Trace[v] != 0) {
@@ -81,7 +83,7 @@ void Print() {
     for (int u = 1; u <= n; ++u)
         for (int v = 1; v <= n; ++v)
             if (c[u][v] > 0) {
-                bfile << "f(" << u << ", " << v << ") = " << c[u][v] << endl;
+                bfile << "f(" << u << ", " << v << ") = " << f[u][v] << endl;
                 if (u == A) m = m + f[A][v];
             }
     bfile << "Max flow: " << m;

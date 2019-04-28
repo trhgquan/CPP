@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -21,7 +21,8 @@ void Try() {
         L[i][0] = 0;
         C[i] = 0;
     }
-    for (int j = 1; j <= M; ++j) L[0][j] = INT_MAX;
+
+    for (int j = 1; j <= M; ++j) L[0][j] = M + 1;
 
     for (int i = 1; i <= N; ++i)
         for (int j = 1; j <= M; ++j) {
@@ -44,7 +45,7 @@ void Trace(int i, int j) {
 }
 
 void Write() {
-    if (L[N][M] == INT_MAX)
+    if (L[N][M] == M + 1)
         bfile << "Cannot make changes" << endl;
     else {
         bfile << L[N][M] << endl;

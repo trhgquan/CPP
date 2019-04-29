@@ -1,12 +1,13 @@
 // LIS for Longest Increasing Subsequence
 // geeksforgeeks solution.
+// same as INCSEQ solution, but using recursion.
 
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
-ifstream afile("LIS.inp", ios::in);
+ifstream afile("INCSEQ.inp", ios::in);
 ofstream bfile("LIS-1.out", ios::out);
 
 // A for Array, L for LIS, T for Trace
@@ -18,6 +19,8 @@ void read() {
 
     for (int i = 1; i <= n; ++i)
         afile >> A[i];
+
+    afile.close();
 }
 
 void LIS () {
@@ -52,17 +55,12 @@ void write() {
         bfile << A[i] << ' ';
         i = T[i];
     }
+    bfile.close();
 }
 
 int main() {
     read();
-
     LIS();
-
     write();
-
-    afile.close();
-    bfile.close();
-
     return 0;
 }

@@ -5,7 +5,7 @@
 using namespace std;
 
 // At here we use the LIS input, for example.
-ifstream afile("LIS.inp", ios::in);
+ifstream afile("INCSEQ.inp", ios::in);
 ofstream bfile("MSIS.out", ios::out);
 
 int MAX_SUM = 0;

@@ -1,3 +1,5 @@
+// THIS SOLUTION OUTPUTS
+// HOW MANY COINS OF EACH TYPES.
 #include <iostream>
 #include <fstream>
 
@@ -7,6 +9,7 @@ ifstream afile("COINCHANGE.INP", ios::in);
 ofstream bfile("COINCHANGE_2.OUT", ios::out);
 
 int N, M;
+// A FOR COINS, C FOR COINS OF EACH TYPE, L FOR RESULT.
 int A[10001], C[10001], L[10001][10001];
 
 void Read() {

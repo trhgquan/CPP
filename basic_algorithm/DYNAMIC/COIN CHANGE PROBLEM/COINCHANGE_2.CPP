@@ -1,5 +1,6 @@
 // THIS SOLUTION OUTPUTS
 // HOW MANY COINS OF EACH TYPES.
+// (NUMBER OF COINS IS INFINITY).
 #include <iostream>
 #include <fstream>
 

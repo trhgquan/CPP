@@ -1,12 +1,13 @@
 // THIS SOLUTION GIVE MINIMUM
 // STEPS TO CHANGE M TO COINS
+// (NUMBER OF COINS IS INFINITY).
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
 ifstream afile("COINCHANGE.INP", ios::in);
-ofstream bfile("COINCHANGE.OUT", ios::out);
+ofstream bfile("COINCHANGE_1.OUT", ios::out);
 
 int N, M;
 int A[10001], MIN[10001]; // A FOR COINS, MIN FOR RESULT.

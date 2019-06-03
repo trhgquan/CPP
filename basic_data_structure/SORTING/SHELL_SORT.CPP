@@ -4,7 +4,7 @@
 using namespace std;
 
 ifstream afile("SORT.INP", ios::in);
-ofstream bfile("SHELL_SORT.OUT", ios::out);
+ofstream bfile("SHELL.OUT", ios::out);
 
 int N;
 int K[1001];

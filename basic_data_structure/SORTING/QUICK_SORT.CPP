@@ -7,7 +7,7 @@
 using namespace std;
 
 ifstream afile("SORT.INP", ios::in);
-ofstream bfile("QUICK_SORT.OUT", ios::out);
+ofstream bfile("QUICK.OUT", ios::out);
 
 int N;
 int K[1001];

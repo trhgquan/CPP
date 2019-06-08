@@ -22,7 +22,7 @@ void Sequential_search() {
 
     for (int i = 1; i <= N; ++i)
         if (A[i] == K) {
-            bfile << "Found at position: " << i << endl;
+            bfile << "Element found!";
             return;
         }
     bfile << "Element not exist!";

@@ -23,7 +23,7 @@ void Init() {
     // All columns is free
     for (int i = 1; i <= n; ++i)
         a[i] = true;
-    for (int i = 2; i <= 2* n; ++i)
+    for (int i = 2; i <= 2 * n; ++i)
         b[i] = true;
     for (int i = 1 - n; i <= 1 + n; ++i)
         c[i] = true;
@@ -54,6 +54,7 @@ void Try (int i) {
 void End() {
     if (count == 0)
         bfile << "No solution!" << endl;
+    else bfile << "Total: " << count << " solutions";
     bfile.close();
 }
 

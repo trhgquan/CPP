@@ -5,8 +5,8 @@
 
 using namespace std;
 
-ofstream bfile("TDBFS.OUT", ios::out);
 ifstream afile("TDBFS.INP", ios::in);
+ofstream bfile("TDBFS.OUT", ios::out);
 
 int T, n;
 queue<int> q;
@@ -17,7 +17,7 @@ void DFS(int u);
 void BFS(int u);
 
 void Solve() {
-    int i, m, u, v;
+    int m, u, v;
 
     afile >> T;
 
@@ -55,6 +55,9 @@ void Solve() {
         }
         memset(graph, false, sizeof(graph));
     }
+
+    afile.close();
+    bfile.close();
 }
 
 int main() {

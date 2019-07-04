@@ -3,8 +3,8 @@
 
 using namespace std;
 
-ifstream afile("ALLIZZWEL.INP", ios::in);
-ofstream bfile("ALLIZZWEL.OUT", ios::out);
+ifstream afile("ALLIZWEL.INP", ios::in);
+ofstream bfile("ALLIZWEL.OUT", ios::out);
 
 int T; // T for testcases
 int R, C; // R for rows, C for columns

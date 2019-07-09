@@ -21,8 +21,8 @@ void check (int i, int j)
 }
 
 int main() {
-    std::ifstream afile("vbgrass-spoj.inp", std::ios::in);
-    std::ofstream bfile("vbgrass-spoj.out", std::ios::out);
+    std::ifstream afile("VBGRASS.inp", std::ios::in);
+    std::ofstream bfile("VBGRASS.out", std::ios::out);
 
     afile >> R >> C;
 

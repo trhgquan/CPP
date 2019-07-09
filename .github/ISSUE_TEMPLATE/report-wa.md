@@ -8,6 +8,8 @@ assignees: ''
 ---
 
 **Describe what is wrong!**
-Have I made any mistakes? Do you recommend any solutions?
+- Name of the problem.
+- Have I made any mistakes?
+- Do you recommend any solutions?
 
-(Send me the problem's extra testcases if you want. Thanks!)
+(Send me the problem's extra testcases if you have. Thanks!)

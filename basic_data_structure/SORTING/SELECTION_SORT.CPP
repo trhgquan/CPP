@@ -19,7 +19,7 @@ void Read() {
 }
 
 void Selection_sort() {
-    int jMin, temp;
+    int jMin;
 
     for (int i = 1; i <= N - 1; ++i) {
         jMin = i;

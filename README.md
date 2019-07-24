@@ -11,6 +11,10 @@ __trhgquan/CPP__ is licensed under the GNU General Public License v3.0.
 
 I wrote those scripts, with examples from many sources: Quora, GeeksforGeeks, StackOverflow,.. for those Final Tests.
 
+## LICENSE
+__trhgquan/CPP__ is licensed under the GNU General Public License v3.0.
+[Find out more](https://github.com/trhgquan/CPP/blob/master/LICENSE)
+
 ## THE FIRST CHAPTER
 Computer Science in Nguyen Dinh Chieu Highschool, Ben Tre Province, SR Vietnam.
 

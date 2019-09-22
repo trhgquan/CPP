@@ -16,6 +16,6 @@ If you are looking for documents (problem PDFs, problem solving in a nutshell, .
 __trhgquan/CPP__ is licensed under the GNU General Public License v3.0.
 [Find out more](https://github.com/trhgquan/CPP/blob/master/LICENSE)
 
-If you are a student and you have a test tomorrow about algorithms, goodluck. Keep calm, chilling and beat it!
+If you have a test tomorrow about algorithms, good luck. Keep calm, chilling and beat it!
 
 From [@trhgquan](https://github.com/trhgquan), with <3 and keyboard.

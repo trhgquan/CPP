@@ -65,7 +65,7 @@ def PolishNotation_prefix(notation):
 testCases = [
     '* + - 10 1 1 + 20 10', # Result: 300
     '/ * 10 10 4',          # Result: 25
-    '* + 5 2 - 5 2',        # Result: 21 
+    '* + 5 2 - 5 2',        # Result: 21
     
     # add more testcases here
 ]

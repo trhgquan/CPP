@@ -1,3 +1,7 @@
+// PROBLEM:
+// https://www.spoj.com/PTIT/problems/BCINCSEQ/
+// (Dynamic Programming)
+
 #include <stdio.h>
 
 #define maxLength 100002

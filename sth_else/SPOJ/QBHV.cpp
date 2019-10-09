@@ -1,3 +1,6 @@
+// PROBLEM:
+// https://vn.spoj.com/problems/QBHV/
+
 #include <algorithm>
 #include <iostream>
 #include <string>

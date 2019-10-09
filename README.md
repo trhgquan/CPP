@@ -1,11 +1,7 @@
 # CPP
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
-Contact me via:
-
-Email: *me@tranhoan.gq*
-
-Website: [https://www.tranhoan.gq/uan](https://www.tranhoan.gq/uan)
+(Currently I'm having some problems with my personal website's domain).
 
 ## Notes
 These algorithms __can__ output errors. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)

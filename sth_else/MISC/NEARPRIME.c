@@ -21,11 +21,16 @@ int nearestPrime(int n) {
     generatePrimes();
 
     int a, b;
+
+	// Get the nearest prime, to the left.
     for (int i = n; i >= 2; --i)
 		if (PRIME[i]) { a = i; break; }
+	// Get the nearest prime, to the right.
 	for (int i = n; i <= 2000004; ++i)
 		if (PRIME[i]) { b = i; break; }
 
+	// If the distance to the left is larger than distance to the right,
+	// output the right.
 	if (n - a > b - n) return b;
 	return a;
 }

@@ -44,6 +44,7 @@ Node* search(Node* root, int key) {
 // Insertion by finding the first vacant node in a BFT (LOT) fashion
 void insert(Node** root, int key) {
     // Check if the tree is empty
+    // If the tree is empty, we create the root node
     if (*root == NULL) {
         *root = createNode(key);
         return;
@@ -58,13 +59,13 @@ void insert(Node** root, int key) {
         Node* temp = q.front();
         q.pop();
 
-        // Check the left
+        // If the left is empty, insert the node into left.
         if (temp->left == NULL) {
             temp->left = newNode;
             return;
         } else q.push(temp->left);
 
-        // Check the right
+        // If the right is empty, insert the node into right.
         if (temp->right == NULL) {
             temp->right = newNode;
             return;

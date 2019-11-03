@@ -1,3 +1,8 @@
+/**
+ * This program implements these traversal methods:
+ * BFT (Breadth First Traversal) or LOT (Level Order Traversal),
+ * DFT (Depth First Traversal), using postorder, preorder and inorder.
+ */
 #include<iostream>
 #include<queue>
 #include<string>
@@ -127,9 +132,9 @@ void DFTraversal_PosO(Node* root) {
 int main() {
     // For example, we will look at this tree
     /**
-    	    1           LEVEL 1
-	     /     \
-	    2       3       LEVEL 2
+            1           LEVEL 1
+         /     \
+        2       3       LEVEL 2
       /   \   /   \
      4     5 6     7    LEVEL 3
     */
@@ -152,4 +157,6 @@ int main() {
     // Using DFT postorder Traversal
     // cout << "Depth First Traversal - postorder:" << endl;
     // DFTraversal_PosO(root);
+
+    return 0;
 }

@@ -1,7 +1,9 @@
 # CPP
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
-(Currently I'm having some problems with my personal website's domain).
+Website: [www.tranhoangquan.codes](https://www.tranhoangquan.codes)
+
+Email: contacts@tranhoangquan.codes
 
 ## Notes
 These algorithms __can__ output errors. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)

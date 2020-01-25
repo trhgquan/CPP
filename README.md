@@ -1,3 +1,6 @@
+![GitHub top language](https://img.shields.io/github/languages/top/trhgquan/CPP?style=flat-square)
+![StyleCI](https://github.styleci.io/repos/152881722/shield)
+
 # CPP
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 

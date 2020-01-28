@@ -1,3 +1,8 @@
+/**
+ * ALLIZWEL - https://www.spoj.com/problems/ALLIZWEL
+ * Code by @trhgquan - https://github.com/trhgquan
+ */
+
 #include <iostream>
 #include <fstream>
 

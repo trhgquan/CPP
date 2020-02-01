@@ -2,7 +2,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/trhgquan/CPP?style=flat-square)
 ![StyleCI](https://github.styleci.io/repos/152881722/shield)
 
-# CPP
+# CPP (Competitive Programming Practice)
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
 Website: [www.tranhoangquan.codes](https://www.tranhoangquan.codes)

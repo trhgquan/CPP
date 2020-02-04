@@ -4,9 +4,6 @@
 
 # CPP (Competitive Programming Practice)
 
-_This can makes you losing faith in clean-coding, sometimes can cause social anxiety by watching these spaghettis for hours._
-_Viewer discretion is advised._
-
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
 Website: [www.tranhoangquan.codes](https://www.tranhoangquan.codes)
@@ -15,6 +12,7 @@ Email: contacts@tranhoangquan.codes
 
 ## Notes
 **Caution:**
+_This can makes you losing faith in clean-coding, sometimes can cause social anxiety by watching these spaghettis for hours. Viewer discretion is advised._
 
 \#1: **Spaghetti codes ahead**. These codes are for Judging System, not for Hooman Judging System. I added some comments, for debugging mostly, and I cannot guarantee that you understood it.
 

@@ -12,9 +12,11 @@ Email: contacts@tranhoangquan.codes
 ## Notes
 **Caution:**
 
-\#1: Spaghetti codes ahead.
+\#1: **Spaghetti codes ahead**. These codes are for Judging System, not for Hooman Judging System. I added some comments, for debugging mostly, and I cannot guarantee that you understood it.
 
-\#2: These algorithms __can__ output errors. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)
+### May disturb some pro-coding. Viewer discretion is advised.
+
+\#2: These algorithms __can__ output errors since sometimes problem's testcases are weak. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)
 
 \#3: If you are looking for documents (problem PDFs, problem solving in a nutshell, ..) please contact me: __*my email, in the first section.*__
 

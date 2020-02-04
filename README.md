@@ -1,6 +1,6 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/trhgquan/CPP?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/trhgquan/CPP?style=flat-square)
-![StyleCI](https://github.styleci.io/repos/152881722/shield)
+![GitHub](https://img.shields.io/github/license/trhgquan/CPP?style=flat-square)
 
 # CPP (Competitive Programming Practice)
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)

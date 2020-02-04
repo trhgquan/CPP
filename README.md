@@ -3,6 +3,10 @@
 ![GitHub](https://img.shields.io/github/license/trhgquan/CPP?style=flat-square)
 
 # CPP (Competitive Programming Practice)
+
+_This can makes you losing faith in clean-coding, sometimes can cause social anxiety by watching these spaghettis for hours._
+_Viewer discretion is advised._
+
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan)
 
 Website: [www.tranhoangquan.codes](https://www.tranhoangquan.codes)
@@ -13,8 +17,6 @@ Email: contacts@tranhoangquan.codes
 **Caution:**
 
 \#1: **Spaghetti codes ahead**. These codes are for Judging System, not for Hooman Judging System. I added some comments, for debugging mostly, and I cannot guarantee that you understood it.
-
-### May disturb some pro-coding. Viewer discretion is advised.
 
 \#2: These algorithms __can__ output errors since sometimes problem's testcases are weak. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)
 

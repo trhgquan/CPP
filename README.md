@@ -10,11 +10,15 @@ Website: [www.tranhoangquan.codes](https://www.tranhoangquan.codes)
 Email: contacts@tranhoangquan.codes
 
 ## Notes
-These algorithms __can__ output errors. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)
+**Caution:**
 
-If you are looking for documents (problem PDFs, problem solving in a nutshell, ..) please contact me: __*my email, in the first section.*__
+\#1: Spaghetti codes ahead.
 
-__Update December 12th, 2019__: Some problems come as .ZIP file, which contains problem's statements and sample source code in C/C++ and Pascal. Feel free to report if there are any errors happened.
+\#2: These algorithms __can__ output errors. [Feel free to report it here](https://github.com/trhgquan/CPP/issues)
+
+\#3: If you are looking for documents (problem PDFs, problem solving in a nutshell, ..) please contact me: __*my email, in the first section.*__
+
+\#4: Some problems come as .ZIP file, which contains problem's statements and sample source code in C/C++ and Pascal.
 
 ## LICENSE
 __trhgquan/CPP__ is licensed under the GNU General Public License v3.0.

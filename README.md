@@ -4,7 +4,7 @@
 
 # CPP (Competitive Programming Practice)
 
-![image](https://github.com/trhgquan/CPP/chumeochuixoong.png)
+![image](chumeochuixoong.png)
 
 CPP Algorithms by [@trhgquan](https://github.com/trhgquan) _aka Chú Mèo Chui Xoong_
 

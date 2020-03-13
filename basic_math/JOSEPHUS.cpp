@@ -7,6 +7,7 @@ lli N, M, C;
 // There are plenty of ways to implement this algorithm.
 // Here are some of it:
 // Note: there are n people, with k steps each.
+// Example problem: ANARC08H (SPOJ).
 
 // Iterative way
 lli josephus_iterative(lli n, lli k) {

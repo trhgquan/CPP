@@ -1,31 +1,36 @@
 // The Josephus algorithm.
-#include <iostream>
-
+#include <stdio.h>
 #define lli long long int
-
-using namespace std;
 
 lli N, M, C;
 
-lli josephus (lli n, lli m);
+// There are plenty of ways to implement this algorithm.
+// Here are some of it:
+// Note: there are n people, with k steps each.
 
-void solve () {
-    scanf("%I64d %I64d", &N, &M);
-    if (N != 0 && M != 0) {
-        printf("%I64d %I64d %I64d \n", N, M, josephus(N, M));
-        solve();
-    }
+// Iterative way
+lli josephus_iterative(lli n, lli k) {
+    lli sum = 0;
+    for (lli i = 2; i <= n; ++i)
+        sum = (sum + k) % i;
+    return sum + 1;
+}
+
+// Recursive way, but not works with big n and k.
+lli josephus_recursive(lli n, lli k) {
+    if (n == 1) return 1;
+    return (josephus_recursive(n - 1, k) + k - 1) % n + 1;
 }
 
 int main() {
-    solve();
-    return 0;
-}
+    while (1) {
+        scanf("%I64d %I64d", &N, &M);
+        if (N != 0 && M != 0) {
+            // Use the way you want here
+            lli result = josephus_recursive(N, M);
 
-lli josephus (lli n, lli m) {
-    lli d = n * m;
-    while (d > n)
-        // The Josephus formula.
-        d = d + (d - n - 1) / (m - 1) - n;
-    return d;
+            printf("%I64d %I64d %I64d\n", N, M, result);
+        } else break;
+    }
+    return 0;
 }

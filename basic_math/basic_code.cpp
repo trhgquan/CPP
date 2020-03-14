@@ -9,7 +9,7 @@ int main() {
     std::cout << "Nhap so b: " << '\n';
     std::cin >> b; // Nhap so b tu ban phim
 
-    // Dua ra so lon hon trong 2 so a va b ma khong can dung cau truc lap.
+    // Dua ra so lon hon trong 2 so a va b ma khong can dung cau truc re nhanh.
     std::cout << ((a+b)+abs(a-b)) / 2 << '\n';
 
     return 0;

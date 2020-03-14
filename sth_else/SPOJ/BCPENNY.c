@@ -3,6 +3,8 @@
  * Code by @trhgquan - https://github.com/trhgquan
  */
 
+// This is also the solution for NY10A - https://www.spoj.com/problems/NY10A
+
 #include<stdio.h>
 
 int main() {

@@ -6,7 +6,7 @@
 
 #include<stdio.h>
 
-int isEven(int a) {
+int isEvenBits(int a) {
     int count = 0;
     while (a > 0) {
         count += a % 2;
@@ -23,12 +23,12 @@ int main() {
         int even = 0; int odds = 0;
         for (int i = 1; i <= N; ++i) {
             int u; scanf("%d", &u);
-            if (isEven(u)) ++even;
+            if (isEvenBits(u)) ++even;
             else ++odds;
         }
         while (Q--) {
             int P; scanf("%d", &P);
-            if (isEven(P)) printf("%d %d", even, odds);
+            if (isEvenBits(P)) printf("%d %d", even, odds);
             else printf("%d %d", odds, even);
             printf("\n");
         }

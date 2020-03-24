@@ -1,5 +1,6 @@
 /**
  * ALGOPRO4 - https://www.spoj.com/PTIT/problems/ALGOPRO4
+ * (Also PTIT124J - https://www.spoj.com/PTIT/problems/PTIT124J)
  * Code by @trhgquan - https://github.com/trhgquan
  */
 

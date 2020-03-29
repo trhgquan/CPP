@@ -41,7 +41,7 @@ int main() {
         }
 
     // Check for lengths greater than 2. k is length of substring
-    for (unsigned k = 3; k < s.size(); ++k) {
+    for (unsigned k = 3; k <= s.size(); ++k) {
         // Fix the starting index
         for (unsigned i = 0; i < s.size() - k + 1; ++i) {
             // Get the ending index of substring from starting index i and length k

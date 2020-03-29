@@ -8,11 +8,15 @@ using namespace std;
 
 /**
  * Note:
- * The "Longest Palindromic Subsequence" in this problem
- * means an adjacent series of characters in a string,
- * different from what we solve in LPS1(which does NOT need to be adjacent).
+ * - The "Longest Palindromic Subsequence" in this problem
+ *   means an adjacent series of characters in a string,
+ *   different from what we solve in LPS1(which does NOT need to be adjacent).
  *
- * Also, I used unsigned since it is very annoying to get warnings in Atom.
+ * - In this problem, the whole string is considered its substring.
+ *   With other problem define "substring" as a series of adjacent character
+ *   and have length < the original string's length, check comments below.
+ *
+ * - I used unsigned since it is very annoying to get warnings in Atom.
  */
 
 int main() {
@@ -40,7 +44,9 @@ int main() {
             maxLength = 2;
         }
 
-    // Check for lengths greater than 2. k is length of substring
+    // Check for lengths greater than 2. k is length of substring.
+    // With problems define "substring" different with the original string,
+    // replace k <= s.size() with k < s.size().
     for (unsigned k = 3; k <= s.size(); ++k) {
         // Fix the starting index
         for (unsigned i = 0; i < s.size() - k + 1; ++i) {

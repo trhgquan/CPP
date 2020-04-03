@@ -12,6 +12,8 @@ int main() {
     freopen("LPS.inp", "r", stdin);
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
     string s; cin >> s; int N = s.length();
+
+    // This solution requires O(N^2) space.
     std::vector<vector<int>>L(N, vector<int>(N));
 
     for (int i = 0; i < N; ++i) L[i][i] = 1;

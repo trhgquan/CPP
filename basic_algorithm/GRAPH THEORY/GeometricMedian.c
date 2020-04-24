@@ -54,12 +54,13 @@ void geometricMedian() {
     current_point.x /= n;
     current_point.y /= n;
 
+    // This step calculate the distance from every point to the gravity point
     double minimum_distance = distance(current_point);
 
     int k = 0;
     while (k < n) {
         for (int i = 1; i <= n; ++i) {
-            if (i != k){
+            if (i != k) {
                 Point new_point;
                 new_point.x = a[i].x;
                 new_point.y = a[i].y;

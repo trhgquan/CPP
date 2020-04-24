@@ -28,6 +28,6 @@ _This can makes you losing faith in clean-coding, sometimes can cause social anx
 __trhgquan/CPP__ is licensed under the GNU General Public License v3.0.
 [Find out more](https://github.com/trhgquan/CPP/blob/master/LICENSE)
 
-If you have a test tomorrow about algorithms, good luck. Keep calm, chilling and beat it!
+If you have a test tomorrow about algorithms, good luck. Keep calm, chill (_not chilling_) and beat it!
 
 From [@trhgquan](https://github.com/trhgquan), with <3 and keyboard.

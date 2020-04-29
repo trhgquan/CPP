@@ -3,8 +3,7 @@
  * Code from GeeksforGeeks.
  * https://www.geeksforgeeks.org/program-for-gauss-jordan-elimination-method/
  *
- * Because I'm a lazy person, I would rather choose to code a program
- * to solve problems than solving it by hand.
+ * Caution: this works only with matrix size N x (N + 1).
  * This is the best implementation that I can find so far.
  */
 

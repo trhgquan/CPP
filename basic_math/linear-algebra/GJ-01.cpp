@@ -4,7 +4,6 @@
  * https://www.geeksforgeeks.org/program-for-gauss-jordan-elimination-method/
  *
  * Caution: this works only with matrix size N x (N + 1).
- * This is the best implementation that I can find so far.
  */
 
 #include<bits/stdc++.h>

@@ -4,6 +4,7 @@
  *
  * CS102 Practice only.
  */
+
 #include<stdio.h>
 #include<stdlib.h>
 

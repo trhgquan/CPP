@@ -97,7 +97,7 @@ void printResult(matrixType matrix, int N, int flag) {
 
 int main() {
     freopen("equations.inp", "r+", stdin);
-    freopen("gj-result.out", "w+", stdout);
+    freopen("GJ-01.out", "w+", stdout);
 
     // Read number of variables.
     int N; scanf("%d", &N);

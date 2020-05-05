@@ -3,12 +3,12 @@
  * insert values to it and sort it (in a basically easiest way)
  * Notice that I don't declare any arrays as array[max_items].
  * The memory is dynamically allocated.
+ *
+ * CS102 Practice only.
  */
 
-#include <stdio.h>
-#include <malloc.h>
-// or,
-// #include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 int array_length;
 
@@ -16,20 +16,19 @@ void Swap(int* a, int* b);
 void interchangeSort(int* array);
 void printArray(int* array);
 
-int main(int argc, char const *argv[]) {
-    // Create a dinamic memory allocation array.
-    int *array = (int*)malloc(sizeof(int));
+int main() {
+    // Create a dynamic memory allocation array.
+    int* array = (int*)malloc(sizeof(int));
 
     // Give it some values:
     int i = 0;
-    while (true) {
+    while (1) {
         int x;
+        printf("(Type a number < 0 to stop)\n");
         printf("Item no. %d: ", i + 1); scanf("%d", &x);
 
-        if (x >= 0) array[i] = x;
+        if (x >= 0) {array[i] = x; ++i;}
         else break;
-
-        i++;
     }
 
     // Set the array length
@@ -43,6 +42,9 @@ int main(int argc, char const *argv[]) {
 
     // Finally, print the result so the user can know the array is sorted,
     printArray(array);
+
+    // Release the array
+    free(array);
     return 0;
 }
 

@@ -3,7 +3,7 @@
 int main() {
     int x = 5;
     int* const p = &x;
-    int const* q = &x;
+    const int* q = &x;
 
     printf("x has address %p, has value %d\n", &x, x);
     printf("p is storing %p, has value %d\n", p, *p);

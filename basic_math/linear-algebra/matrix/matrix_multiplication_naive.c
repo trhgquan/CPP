@@ -28,7 +28,7 @@ void printMatrix(int** m, int R, int C) {
 }
 
 int main() {
-    freopen("matrices.inp", "r", stdin);
+    freopen("matrix_multiplication.inp", "r", stdin);
 
     // Get matrices row and column.
     int R, C; scanf("%d%d", &R, &C);

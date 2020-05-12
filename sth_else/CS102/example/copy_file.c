@@ -2,6 +2,10 @@
  * Copy file from a file to another file,
  * filenames come from keyboard.
  *
+ * Resources used:
+ * - sth_else/CS102/file_and_command_argument/binary_file_read.c
+ * - sth_else/CS102/file_and_command_argument/binary_file_write.c
+ *
  * Notice that I used fprintf and printf separately
  * to print console and write files.
  *

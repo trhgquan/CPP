@@ -19,14 +19,24 @@
 #define BUFFER_SIZE 1024 * 4 // 4 kilobytes each time
 
 int getFileSize(char* file_source) {
+    // File size is 0, if file does not exist.
     int fileSize = 0;
 
+    // Open file
+    FILE* f = fopen(file_source, "rb");
 
-    FILE* f = fopen(file_source, "rb"); // Open file
-    fseek(f, 0, SEEK_END);              // move the pointer to end of file.
-    fileSize = ftell(f);                // get current file pointer, also file size.
-    fclose(f);
+    // File open successfully.
+    if (f != NULL) {
+        // move the pointer to end of file.
+        fseek(f, 0, SEEK_END);
 
+        // Get current file pointer, also file size.
+        // Then close the file.
+        fileSize = ftell(f);
+        fclose(f);
+    }
+
+    // Return the file size.
     return fileSize;
 }
 

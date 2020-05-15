@@ -47,11 +47,12 @@ void SarrusRule(int** matrix) {
     int sumPositive, sumNegative; sumPositive = sumNegative = 0;
 
     // Calculate diagonals.
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < 3; ++i) {
+        // Calculate diagonals.
         sumPositive += matrix[0][i] * matrix[1][i + 1] * matrix[2][i + 2];
-    // Calculate anti-diagonals.
-    for (int i = 0; i < 3; ++i)
+        // Calculate anti-diagonals.
         sumNegative += matrix[2][i] * matrix[1][i + 1] * matrix[0][i + 2];
+    }
 
     // Print the result.
     printf("det(A) = %d\n", abs(sumPositive - sumNegative));

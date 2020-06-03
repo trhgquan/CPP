@@ -1,6 +1,6 @@
 /**
  * Bai tap tuan 06 - Ky thuat Lap trinh.
- * 
+ *
  * Code by Tran Hoang Quan - 19120338.
  * GitHub: @trhgquan - https://github.com/trhgquan
  */
@@ -119,7 +119,7 @@ void writeBMPFile(BMPFile bmp, int SAMPLE_PART_HEIGHT, int SAMPLE_PART_WIDTH) {
 	// Set new image size for new image.
 	bmp.dib.imageHeight = newHeight;
 	bmp.dib.imageWidth  = newWidth;
-	
+
 	int count = 0;
 	int lastPixelI = 0, lastPixelJ = 0;
 	while (count < SAMPLE_PART_HEIGHT * SAMPLE_PART_WIDTH) {

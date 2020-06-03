@@ -1,6 +1,6 @@
 /**
  * Bai tap tuan 06 - Ky thuat Lap trinh.
- * 
+ *
  * This program split an BMP image into w*h size images.
  *
  * Code by Tran Hoang Quan - 19120338.
@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
 			printf("Too less arguments!\n");
 			hasErrors = 1;
 	}
-	
+
 	if (SAMPLE_PART_HEIGHT <= 0 || SAMPLE_PART_WIDTH <= 0) {
 		hasErrors = 1;
 		printf("Parts must larger than 0\n");

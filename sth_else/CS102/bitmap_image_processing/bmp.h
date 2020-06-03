@@ -1,6 +1,6 @@
 /**
  * Bai tap tuan 06 - Ky thuat Lap trinh.
- * 
+ *
  * Code by Tran Hoang Quan - 19120338.
  * GitHub: @trhgquan - https://github.com/trhgquan
  */
@@ -91,4 +91,3 @@ void drawBMP(BMPFile);
 void writeBMPFile(BMPFile, int, int);
 
 void releaseBMPPixelArray(BMPFile&);
-

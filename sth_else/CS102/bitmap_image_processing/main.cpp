@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
             break;
 
         default:
-            printf("Too less arguments!\n");
+            printf("Too few / many arguments!\n");
             hasErrors = 1;
     }
 
@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
         // Write file into files.
         writeBMPFile(bmp, SAMPLE_PART_HEIGHT, SAMPLE_PART_WIDTH);
 
-        printf("File written successfully.\n");
+        printf("Files written successfully.\n");
 
         // Release memory.
         releaseBMPPixelArray(bmp);

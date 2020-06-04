@@ -1,8 +1,7 @@
 /**
- * Bai tap tuan 06 - Ky thuat Lap trinh.
- *
  * This program split an BMP image into w*h size images.
- *
+ * (Week 06 - CS102).
+ * 
  * Code by Tran Hoang Quan - 19120338.
  * GitHub: @trhgquan - https://github.com/trhgquan
  */
@@ -11,11 +10,16 @@
 
 int main(int argc, char** argv) {
     int SAMPLE_PART_HEIGHT = 1, SAMPLE_PART_WIDTH = 1;
+
+    // Path to the .bmp file.
     char* filePath = NULL;
 
+    // Error handling.
     bool hasErrors = 0;
 
     switch (argc) {
+        // filename -w SAMPLE_PART_WIDTH -h SAMPLE_PART_HEIGHT
+        // filename -h SAMPLE_PART_HEIGHT -w SAMPLE_PART_WIDTH
         case 6:
             filePath = argv[1];
             if (!strcmp(argv[2], "-h") && !strcmp(argv[4], "-w")) {
@@ -34,6 +38,8 @@ int main(int argc, char** argv) {
             }
             break;
 
+        // filename -h SAMPLE_PART_HEIGHT
+        // filename -w SAMPLE_PART_WIDTH
         case 4:
             filePath = argv[1];
             if (!strcmp(argv[2], "-h"))
@@ -51,6 +57,7 @@ int main(int argc, char** argv) {
             hasErrors = 1;
     }
 
+    // If part size is smaller than zero, return error.
     if (SAMPLE_PART_HEIGHT <= 0 || SAMPLE_PART_WIDTH <= 0) {
         hasErrors = 1;
         printf("Parts must larger than 0\n");

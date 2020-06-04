@@ -1,5 +1,6 @@
 /**
- * Bai tap tuan 06 - Ky thuat Lap trinh.
+ * Bitmap Image Processing,
+ * (Week 06 - CS102).
  *
  * Code by Tran Hoang Quan - 19120338.
  * GitHub: @trhgquan - https://github.com/trhgquan
@@ -7,6 +8,12 @@
 
 #include"bmp.h"
 
+/**
+ * This function check if a file is a valid BMP file.
+ * @param  f     pointer to the file.
+ * @return       true if the file is a valid BMP file,
+ *               false otherwise.
+ */
 bool isBMPFile(FILE* f) {
     if (f == NULL) return false;
 
@@ -17,6 +24,12 @@ bool isBMPFile(FILE* f) {
     return signature.data[0] == 'B' && signature.data[1] == 'M';
 }
 
+/**
+ * This function initialise a Pixel Array.
+ * @param pa        reference to the Pixel Array variable.
+ * @param width     image width.
+ * @param height    image height.
+ */
 void initPixels(pixelArray& pa, int width, int height) {
     pa.rowCount = height;
     pa.columnCount = width;
@@ -27,6 +40,11 @@ void initPixels(pixelArray& pa, int width, int height) {
         pa.pixels[pa.rowCount - 1 - i] = (Color*)(pa.rawBytes + pa.lineSize * i);
 }
 
+/**
+ * This function read a BMP file.
+ * @param f   file name.
+ * @param bmp reference to the variable stores the BMP file structure.
+ */
 void readBMPHeader(FILE* f, BMPFile& bmp) {
     if (f == NULL) return;
 
@@ -34,6 +52,11 @@ void readBMPHeader(FILE* f, BMPFile& bmp) {
     fread(&bmp.header, sizeof(BMPHeader), 1, f);
 }
 
+/**
+ * This function read the DIB of a BMP file.
+ * @param f   pointer to the file.
+ * @param bmp reference to the variable stores the BMP file structure.
+ */
 void readBMPDIB(FILE* f, BMPFile& bmp) {
     if (f == NULL) return;
 
@@ -41,6 +64,11 @@ void readBMPDIB(FILE* f, BMPFile& bmp) {
     fread(&bmp.dib, sizeof(BMPDIB), 1, f);
 }
 
+/**
+ * This function read the Pixel Array of a BMP file.
+ * @param f   pointer to the file.
+ * @param bmp reference to the variable stores the BMP file structure.
+ */
 void readBMPPixelArray(FILE* f, BMPFile& bmp) {
     if (f == NULL) return;
 
@@ -56,11 +84,38 @@ void readBMPPixelArray(FILE* f, BMPFile& bmp) {
     initPixels(bmp.array, bmp.dib.imageWidth, bmp.dib.imageHeight);
 }
 
+/**
+ * This function read a BMP file.
+ * @param fileName file name.
+ * @param bmp      reference to the variable stores the BMP file structure.
+ */
+void readBMPFile(char* fileName, BMPFile& bmp) {
+    FILE* f = fopen(fileName, "rb");
+    if (f == NULL || !isBMPFile(f)) {
+        printf("Error or Invaid BMP file\n");
+        return;
+    }
+
+    readBMPHeader(f, bmp);
+    readBMPDIB(f, bmp);
+    readBMPPixelArray(f, bmp);
+
+    fclose(f);
+}
+
+/**
+ * This function release a BMP Pixel Array.
+ * @param bmp reference to BMP variable.
+ */
 void releaseBMPPixelArray(BMPFile& bmp) {
     delete[]bmp.array.rawBytes;
     delete[]bmp.array.pixels;
 }
 
+/**
+ * This function print a BMP file's header.
+ * @param bmp variable storing the BMP.
+ */
 void printBMPHeader(BMPFile bmp) {
     BMPHeader header = bmp.header;
 
@@ -72,8 +127,11 @@ void printBMPHeader(BMPFile bmp) {
     printf("\n");
 }
 
-void printBMPDIB(BMPFile bmp)
-{
+/**
+ * This function print a BMP file's DIB.
+ * @param bmp variable storing the BMP.
+ */
+void printBMPDIB(BMPFile bmp) {
     BMPDIB dib = bmp.dib;
 
     printf("*** BMP Dib ***\n");
@@ -91,6 +149,10 @@ void printBMPDIB(BMPFile bmp)
     printf("\n");
 }
 
+/**
+ * This function draw a BMP image.
+ * @param bmp variable storing the BMP.
+ */
 void drawBMP(BMPFile bmp) {
     HWND console = GetConsoleWindow();
     HDC hdc = GetDC(console);
@@ -105,6 +167,12 @@ void drawBMP(BMPFile bmp) {
     ReleaseDC(console, hdc);
 }
 
+/**
+ * This function write a BMP variable to multiple images.
+ * @param bmp                variable storing the BMP.
+ * @param SAMPLE_PART_WIDTH  parts to cut by height.
+ * @param SAMPLE_PART_HEIGHT parts to cut by width.
+ */
 void writeBMPFile(BMPFile bmp, int SAMPLE_PART_HEIGHT, int SAMPLE_PART_WIDTH) {
     BMPFile originalBMP = bmp;
 
@@ -156,18 +224,4 @@ void writeBMPFile(BMPFile bmp, int SAMPLE_PART_HEIGHT, int SAMPLE_PART_WIDTH) {
         // Close file.
         fclose(f);
     }
-}
-
-void readBMPFile(char* fileName, BMPFile& bmp) {
-    FILE* f = fopen(fileName, "rb");
-    if (f == NULL || !isBMPFile(f)) {
-        printf("Error or Invaid BMP file\n");
-        return;
-    }
-
-    readBMPHeader(f, bmp);
-    readBMPDIB(f, bmp);
-    readBMPPixelArray(f, bmp);
-
-    fclose(f);
 }

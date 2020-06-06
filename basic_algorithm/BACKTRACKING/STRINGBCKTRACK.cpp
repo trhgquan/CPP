@@ -1,4 +1,5 @@
 // A STRING TO MANY STRING WITH ITS CHARACTERS
+// aka generate permutation of a string.
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -13,7 +14,7 @@ std::ifstream afile("STRINGBCKTRACK.INP", std::ios::in);
 std::ofstream bfile("STRINGBCKTRACK.OUT", std::ios::out);
 
 void print() {
-    for (int j = 1; j <= s.length(); ++j)
+    for (int j = 1; j <= (int)s.length(); ++j)
         bfile << r[j];
     bfile << std::endl;
 }
@@ -35,7 +36,7 @@ int main() {
     while (!afile.eof()) {
         afile >> s;
 
-        for (int i = 0; i < s.length(); ++i) {
+        for (int i = 0; i < (int)s.length(); ++i) {
             a[i + 1] = s[i];
             b[i] = false;
         }
@@ -48,5 +49,3 @@ int main() {
     bfile.close();
     return 0;
 }
-
-

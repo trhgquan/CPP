@@ -210,10 +210,11 @@ void writeBMPFile(BMPFile bmp, int SAMPLE_PART_HEIGHT, int SAMPLE_PART_WIDTH) {
         }
 
         if (lastPixelJ < originalBMP.dib.imageWidth) lastPixelJ += newWidth;
+
         if (lastPixelJ == originalBMP.dib.imageWidth) {
             if (lastPixelI < originalBMP.dib.imageHeight) {
-            lastPixelI += newHeight;
-            lastPixelJ = 0;
+                lastPixelI += newHeight;
+                lastPixelJ = 0;
             } else {
                 fclose(f);
                 break;

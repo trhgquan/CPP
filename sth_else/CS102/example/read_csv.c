@@ -1,6 +1,6 @@
 /**
  * This program read a csv file and print it to the screen.
- * 
+ *
  * Code by @trhgquan - https://github.com/trhgquan
  */
 #include<stdio.h>
@@ -53,6 +53,13 @@ int main() {
     do {
         printf("File path: "); scanf("%s", fileName);
         FILE* f = fopen(fileName, "r+");
+
+        // Terminating script using special command.
+        if (!strcmp("stop", fileName)) {
+            printf("Terminating process..\n");
+            break;
+        }
+
         if (f == NULL)
             printf("File \"%s\" doesn't exist.\n", fileName);
         else if (!isCSV(fileName))

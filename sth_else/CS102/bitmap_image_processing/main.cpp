@@ -1,7 +1,7 @@
 /**
  * This program split an BMP image into w*h size images.
  * (Week 06 - CS102).
- * 
+ *
  * Code by Tran Hoang Quan - 19120338.
  * GitHub: @trhgquan - https://github.com/trhgquan
  */
@@ -61,6 +61,13 @@ int main(int argc, char** argv) {
     if (SAMPLE_PART_HEIGHT <= 0 || SAMPLE_PART_WIDTH <= 0) {
         hasErrors = 1;
         printf("Parts must larger than 0\n");
+    }
+
+    // If file is not a valid BMP file, return error.
+    FILE* f = fopen(filePath, "rb");
+    if (!isBMPFile(f)) {
+        hasErrors = 1;
+        printf("This file is not a valid BMP file.\n");
     }
 
     if (!hasErrors) {

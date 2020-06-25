@@ -1,5 +1,6 @@
 /**
  * Singly Linked List (data structure).
+ * Some actions could been done faster when using Doubly Linked List.
  *
  * Code by @trhgquan - https://github.com/trhgquan
  */
@@ -103,20 +104,12 @@ void insertToBack(linkedList* linkedList, int value) {
     // Get last node of current list.
     node* lastNode = getLastNode(*linkedList);
 
-    // If the list is empty, insert to front aka first node.
-    if (lastNode == NULL) {
-        printf("Last node is NULL\n");
-        insertToFront(linkedList, value);
-    }
-    else {
-        // Create a new node.
-        node* newNode = createNode(value);
+    // Create a new node.
+    node* newNode = createNode(value);
 
-        // Point current last node to new node,
-        // make the new node become the last node.
-        lastNode->next = newNode;
-    }
-
+    // Point current last node to new node,
+    // make the new node become the last node.
+    lastNode->next = newNode;
 }
 
 /**
@@ -176,7 +169,18 @@ void deleteHeadNode(linkedList* linkedList) {
  * @param linkedList pointer to the linked list.
  */
 void deleteLastNode(linkedList* linkedList) {
-    node* lastNode = getLastNode(*linkedList);
+    // Pointers store last and previous of last node.
+    node* lastNode = linkedList->head;
+    node* prevLastNode = NULL;
+
+    // Get last and previous of last node.
+    while (lastNode->next != NULL) {
+        prevLastNode = lastNode;
+        lastNode = lastNode->next;
+    }
+
+    // Update the list and free last node.
+    prevLastNode->next = NULL;
     free(lastNode);
 }
 

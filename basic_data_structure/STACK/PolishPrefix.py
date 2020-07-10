@@ -1,4 +1,8 @@
-# THIS CALCULATE Polish Prefix Notation
+##
+## The Polish Prefix Notation Calculator
+##
+## Code by @trhgquan - https://github.com/trhgquan
+## 
 
 # Uncomment the code below if you use deque
 from collections import deque
@@ -31,9 +35,9 @@ def PolishNotation_prefix(notation):
     # For prefix notation, we read the notation from end to start.
     for i in range(len(notation) - 1, -1, -1):
         character = notation[i]
-        
+
         if character == ' ':
-            if len(numTemp) > 0: 
+            if len(numTemp) > 0:
                 # Uncomment if you use list or deque
                 polishStack.append(int(numTemp))
 
@@ -66,7 +70,7 @@ testCases = [
     '* + - 10 1 1 + 20 10', # Result: 300
     '/ * 10 10 4',          # Result: 25
     '* + 5 2 - 5 2',        # Result: 21
-    
+
     # add more testcases here
 ]
 

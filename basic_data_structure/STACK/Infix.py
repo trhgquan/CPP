@@ -1,3 +1,9 @@
+##
+## Infix notation calculator
+##
+## Code by @trhgquan - https://github.com/trhgquan
+## 
+
 from collections import deque
 
 # Math operators

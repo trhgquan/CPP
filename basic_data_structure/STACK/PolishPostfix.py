@@ -1,4 +1,8 @@
-# THIS CALCULATE Polish Postfix Notation
+##
+## The Polish Postfix Notation Calculator
+##
+## Code by @trhgquan - https://github.com/trhgquan
+## 
 
 # Uncomment the code below if you use deque
 from collections import deque

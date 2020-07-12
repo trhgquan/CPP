@@ -180,10 +180,11 @@ void mergeSort(Node** headList) {
 }
 
 int main() {
+    freopen("SORT.INP", "r+", stdin);
     singlyLinkedList* list = createList();
-    int N; printf("Total elements of the linked list: "); scanf("%d", &N);
+    int N; scanf("%d", &N);
     for (int i = 1; i <= N; ++i) {
-        int nodeValue; printf("Element no. %d: ", i); scanf("%d", &nodeValue);
+        int nodeValue; scanf("%d", &nodeValue);
         insertToBack(list, nodeValue);
     }
 

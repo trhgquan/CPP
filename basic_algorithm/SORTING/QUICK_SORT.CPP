@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+
 // For srand() and rand()
 #include <cstdlib>
 #include <ctime>
@@ -21,6 +22,7 @@ void Read() {
     afile.close();
 }
 
+// This method is mentioned in the DSAP Textbook - Minh-Hoang Le (PhD).
 void Quick_sort(int L, int H) {
     int Pivot;
 
@@ -46,6 +48,30 @@ void Quick_sort(int L, int H) {
     Quick_sort(L, j); Quick_sort(i, H);
 }
 
+// This method is mentioned in GeeksforGeeks,
+// which doesn't require random pivot.
+int partition(int low, int high) {
+    int pivot = K[high];
+    int i = low - 1;
+
+    for (int j = low; j < high; ++j) {
+        if (K[j] < pivot) {
+            ++i;
+            swap(K[i], K[j]);
+        }
+    }
+    swap(K[i + 1], K[high]);
+    return i + 1;
+}
+
+void quickSortDnC(int low, int high) {
+    if (low >= high) return;
+
+    int part = partition(low, high);
+    quickSortDnC(low, part - 1);
+    quickSortDnC(part + 1, high);
+}
+
 void Print() {
     for (int i = 1; i <= N; ++i)
         bfile << K[i] << '\t';
@@ -54,7 +80,12 @@ void Print() {
 
 int main() {
     Read();
-    Quick_sort(1, N);
+
+    // Choose 1 from 2 function below.
+
+    // Quick_sort(1, N);
+    // quickSortDnC(1, N);
+
     Print();
     return 0;
 }

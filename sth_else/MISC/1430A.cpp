@@ -1,5 +1,5 @@
 /**
- * CODE - LINK
+ * 1430A - https://codeforces.com/contest/1430/problem/A
  *
  * Code by @trhgquan - https://github.com/trhgquan
  */

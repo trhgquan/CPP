@@ -1,9 +1,10 @@
-#include <iostream>
-#include <fstream>
+#include<iostream>
+#include<stack>
+#include<fstream>
 
 // For srand() and rand()
-#include <cstdlib>
-#include <ctime>
+#include<cstdlib>
+#include<ctime>
 
 using namespace std;
 
@@ -64,6 +65,7 @@ int partition(int low, int high) {
     return i + 1;
 }
 
+// QuickSort, using divide and conquer.
 void quickSortDnC(int low, int high) {
     if (low >= high) return;
 
@@ -72,19 +74,38 @@ void quickSortDnC(int low, int high) {
     quickSortDnC(part + 1, high);
 }
 
+// QuickSort, without divide and conquer.
+// to be easy: using a stack.
+void quickSortStack() {
+  stack<int>stk; stk.push(1); stk.push(N);
+
+  while (!stk.empty()) {
+    int l, r;
+    r = stk.top(); stk.pop();
+    l = stk.top(); stk.pop();
+
+    if (r <= l) continue;
+
+    int part = partition(l, r);
+    stk.push(l); stk.push(part - 1);
+    stk.push(part + 1); stk.push(r);
+  }
+}
+
 void Print() {
     for (int i = 1; i <= N; ++i)
-        bfile << K[i] << '\t';
+        bfile << K[i] << ' ';
     bfile.close();
 }
 
 int main() {
     Read();
 
-    // Choose 1 from 2 function below.
+    // Choose 1 from 3 function below.
 
     // Quick_sort(1, N);
     // quickSortDnC(1, N);
+    // quickSortStack();
 
     Print();
     return 0;

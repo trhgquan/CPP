@@ -41,8 +41,9 @@ int main() {
     // else if (N < 10) printf("%d", N);
     // else {
     //     int res = 0; int found = 0;
-    //     // Since 6! = 720 > 600, we can make 123456 is the biggest num to check
-    //     for (int i = 11; i <= 123456; ++i)
+    //     // Since 6! = 720 > 600 and we can brute force to find n = 600, x = 3558
+    //     // hence we can make 12345 (5 digits) the biggest num to check
+    //     for (int i = 11; i <= 12345; ++i)
     //         if (productDigits(i) == N) {res = i; found = 1; break;}
     //
     //     if (found) printf("%d", res);

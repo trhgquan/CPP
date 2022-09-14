@@ -194,14 +194,14 @@ class BST {
           return currentNode;
         }
 
-        // currentNode = leftmostNode(root->right);
-        currentNode = rightmostNode(root->left);
+        currentNode = leftmostNode(root->right);
+        // currentNode = rightmostNode(root->left);
 
         root->key = currentNode->key;
         root->index = currentNode->index;
 
-        // root->right = erase(root->right, root->key);
-        root->left = erase(root->left, root->key);
+        root->right = erase(root->right, root->key);
+        // root->left = erase(root->left, root->key);
       }
 
       updateHeight(root);
@@ -209,11 +209,19 @@ class BST {
 
       return root;
     }
+
+    void inorderTraversal(link root) {
+      if (root == NULL) return;
+
+      if (root->left != NULL) inorderTraversal(root->left);
+      cout << root->key << ' ';
+      if (root->right != NULL) inorderTraversal(root->right);
+    }
 };
 
 int main() {
-  freopen("BST.txt", "r+", stdin);
-  freopen("AVL.out", "w+", stdout);
+  freopen("AVL.txt", "r+", stdin);
+  // freopen("AVL.out", "w+", stdout);
 
   BST tree;
   int n, k; cin >> n >> k;
@@ -221,6 +229,10 @@ int main() {
     int u; cin >> u;
     tree.insert(u, i);
   }
+
+  cout << "Inorder traversal: ";
+  tree.inorderTraversal(tree.root);
+  cout << endl;
 
   cout << "Tree before deleting.." << endl;
   tree.printTree();
